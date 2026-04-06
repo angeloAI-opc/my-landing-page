@@ -3,10 +3,21 @@ const profile = {
   tagline:
     "I like building simple things on the web that feel thoughtful, calm, and genuinely personal.",
   currently: "Currently learning how to turn small ideas into polished products.",
+  heroMetrics: [
+    { label: "Focus", value: "Web + Design" },
+    { label: "Approach", value: "Ship small" },
+    { label: "Status", value: "Always learning" }
+  ],
   bio: [
     "I made this page as a simple corner of the internet that says a little about who I am before it says what I do. I enjoy creating things that feel useful, quiet, and clear, especially when they help people understand me a bit faster.",
     "Most of the time, I am exploring design, code, and the kind of online experiences that feel more human than corporate. I am drawn to projects that start small, evolve naturally, and leave room for curiosity instead of pressure.",
     "This version is intentionally lightweight. It works without any backend, but the structure is ready if I ever want to plug in Supabase later for a contact form, guestbook, or editable profile content."
+  ],
+  focusAreas: [
+    "Calm visual design",
+    "Meaningful micro-interactions",
+    "Clear storytelling",
+    "Future-ready structure"
   ],
   interests: [
     {
@@ -48,6 +59,8 @@ const nameNode = document.querySelector("#name");
 const taglineNode = document.querySelector("#tagline");
 const currentlyNode = document.querySelector("#currently");
 const bioNode = document.querySelector("#bio");
+const focusListNode = document.querySelector("#focus-list");
+const metricsNode = document.querySelector("#hero-metrics");
 const interestsNode = document.querySelector("#interests-grid");
 const linksNode = document.querySelector("#links");
 const pageTitle = document.querySelector("title");
@@ -57,10 +70,33 @@ nameNode.textContent = profile.name;
 taglineNode.textContent = profile.tagline;
 currentlyNode.textContent = profile.currently;
 
+profile.heroMetrics.forEach((metric) => {
+  const metricCard = document.createElement("article");
+  metricCard.className = "metric";
+
+  const label = document.createElement("span");
+  label.className = "metric-label";
+  label.textContent = metric.label;
+
+  const value = document.createElement("span");
+  value.className = "metric-value";
+  value.textContent = metric.value;
+
+  metricCard.append(label, value);
+  metricsNode.appendChild(metricCard);
+});
+
 profile.bio.forEach((paragraph) => {
   const p = document.createElement("p");
   p.textContent = paragraph;
   bioNode.appendChild(p);
+});
+
+profile.focusAreas.forEach((item) => {
+  const chip = document.createElement("div");
+  chip.className = "focus-item";
+  chip.textContent = item;
+  focusListNode.appendChild(chip);
 });
 
 profile.interests.forEach((interest) => {
