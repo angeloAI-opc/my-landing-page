@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Intro Landing Page</title>
+    <meta
+      name="description"
+      content="A simple personal introduction landing page with space to grow into future features."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero fade-in" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal intro</p>
+          <h1 id="name"></h1>
+          <p class="tagline" id="tagline"></p>
+          <p class="currently" id="currently"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Say hello</a>
+            <a class="button button-secondary" href="#about">Read my story</a>
+          </div>
+        </div>
+
+        <div class="hero-portrait" aria-hidden="true">
+          <div class="portrait-frame">
+            <div class="portrait-glow"></div>
+            <div class="portrait-card">
+              <img
+                class="portrait-image"
+                src="ID_Picture.jpg"
+                alt="Portrait of Angelo"
+              />
+              <p class="portrait-note">Warm, curious, and still building.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section fade-in" id="about">
+          <div class="section-heading">
+            <p class="eyebrow">About me</p>
+            <h2>A short introduction, not a resume.</h2>
+          </div>
+          <div class="bio" id="bio"></div>
+        </section>
+
+        <section class="section fade-in" id="interests">
+          <div class="section-heading">
+            <p class="eyebrow">What I'm into</p>
+            <h2>Things that keep me learning and making.</h2>
+          </div>
+          <div class="interest-grid" id="interests-grid"></div>
+        </section>
+
+        <section class="section fade-in" id="contact">
+          <div class="section-heading">
+            <p class="eyebrow">Links and contact</p>
+            <h2>Find me online or leave this section ready for future upgrades.</h2>
+          </div>
+
+          <div class="contact-panel">
+            <div>
+              <p class="contact-copy">
+                This page is fully static for now, but it is already structured so a
+                Supabase-powered contact form, guestbook, or editable status can drop
+                in later without changing the overall layout.
+              </p>
+              <p class="future-note">Future form placeholder</p>
+            </div>
+
+            <div class="link-list" id="links"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
