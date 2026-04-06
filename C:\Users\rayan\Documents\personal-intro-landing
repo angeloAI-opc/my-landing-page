@@ -1,0 +1,7 @@
+cd C:\Users\rayan\Documents\personal-intro-landing
+git init
+git add .
+git commit -m "Initial personal landing page"
+git branch -M main
+git remote add origin https://github.com/AngeloAI-opc/personal-intro-landing.git
+git push -u origin main
