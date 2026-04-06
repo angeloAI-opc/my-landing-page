@@ -210,8 +210,8 @@ h2 {
 }
 
 .portrait-image-shell {
-  width: 172px;
-  height: 196px;
+  width: 176px;
+  aspect-ratio: 520 / 594;
   border-radius: 28px;
   overflow: hidden;
   background: #ffffff;
@@ -223,7 +223,7 @@ h2 {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
 }
 
