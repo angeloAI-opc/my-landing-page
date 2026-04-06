@@ -6,7 +6,7 @@
     <title>Personal Intro Landing Page</title>
     <meta
       name="description"
-      content="A simple personal introduction landing page with space to grow into future features."
+      content="A modern personal introduction landing page with a clean layout, thoughtful hierarchy, and room to grow."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,16 +18,29 @@
   </head>
   <body>
     <div class="page-shell">
+      <nav class="top-nav fade-in" aria-label="Primary">
+        <a class="brand" href="#top">A</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#interests">Interests</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="button button-secondary nav-cta" href="#contact">Let's connect</a>
+      </nav>
+
       <header class="hero fade-in" id="top">
         <div class="hero-copy">
           <p class="eyebrow">Personal intro</p>
           <h1 id="name"></h1>
           <p class="tagline" id="tagline"></p>
           <p class="currently" id="currently"></p>
+
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Say hello</a>
             <a class="button button-secondary" href="#about">Read my story</a>
           </div>
+
+          <div class="hero-metrics" id="hero-metrics"></div>
         </div>
 
         <div class="hero-portrait" aria-hidden="true">
@@ -53,7 +66,14 @@
             <p class="eyebrow">About me</p>
             <h2>A short introduction, not a resume.</h2>
           </div>
-          <div class="bio" id="bio"></div>
+
+          <div class="about-layout">
+            <div class="bio" id="bio"></div>
+            <aside class="focus-panel">
+              <p class="focus-title">What I optimize for</p>
+              <div class="focus-list" id="focus-list"></div>
+            </aside>
+          </div>
         </section>
 
         <section class="section fade-in" id="interests">
@@ -74,8 +94,8 @@
             <div>
               <p class="contact-copy">
                 This page is fully static for now, but it is already structured so a
-                Supabase-powered contact form, guestbook, or editable status can drop
-                in later without changing the overall layout.
+                Supabase-powered contact form, guestbook, or editable status can drop in
+                later without changing the overall layout.
               </p>
               <p class="future-note">Future form placeholder</p>
             </div>
